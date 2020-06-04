@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<ControlDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0</Version>
+  <DataSourceAllowed>None</DataSourceAllowed>
+  <CustomDataSources />
+  <AutoGrowSupported>false</AutoGrowSupported>
+  <IncludeInControlInfo>false</IncludeInControlInfo>
+  <SupportFiles>
+    <Directory>css</Directory>
+    <Directory>fonts</Directory>
+    <Directory>icon</Directory>
+    <Directory>img</Directory>
+    <Directory>images</Directory>
+    <Directory>js</Directory>
+  </SupportFiles>
+  <iOS_SupportFiles />
+  <Android_SupportFiles />
+  <BB_SupportFiles />
+  <RuntimeRender>KnetMetroMenuRender.js</RuntimeRender>
+  <GxResources>KnetMetroMenu.xpz</GxResources>
+  <HeightPropertyName>Height</HeightPropertyName>
+  <WidthPropertyName>Width</WidthPropertyName>
+  <ResizeSupported>true</ResizeSupported>
+  <ObjClass>KnetMetroMenu</ObjClass>
+  <Description>KnetMetroMenu</Description>
+  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <Name>KnetMetroMenu</Name>
+  <Platforms />
+  <ShowMethod>show</ShowMethod>
+  <ReferencedFiles>
+    <File>css\modern.css</File>
+    <File>css\theme-dark.css</File>
+    <File>js\jquery-1.8.2.min.js</File>
+    <File>js\jquery.mousewheel.min.js</File>
+    <File>js\KnetMetroResize.js</File>
+  </ReferencedFiles>
+  <iOS_ReferencedFiles />
+  <Android_ReferencedFiles />
+  <BB_ReferencedFiles />
+  <Constructor>
+    <Parameters />
+    <Name>KnetMetroMenu</Name>
+  </Constructor>
+  <PropertiesDefinition>KnetMetroMenuProperties.xml</PropertiesDefinition>
+  <DesignRender>KnetMetroMenuRender.xsl</DesignRender>
+  <ToolboxIcon>icon\Knet.ico</ToolboxIcon>
+  <ControlType />
+  <Categories>
+    <Category>Knet App</Category>
+  </Categories>
+  <Events>
+    <Event>OnClick</Event>
+  </Events>
+  <Methods />
+  <Actions>
+    <Action>
+      <Order>0</Order>
+      <ActionProperties>
+        <Property>
+          <Key>
+            <string>Name</string>
+          </Key>
+          <Value>
+            <string>MetroMenuData</string>
+          </Value>
+        </Property>
+        <Property>
+          <Key>
+            <string>ATTCUSTOMTYPE</string>
+          </Key>
+          <Value>
+            <string>MetroMenuData</string>
+          </Value>
+        </Property>
+      </ActionProperties>
+      <Data />
+      <ActionType>VarDeclaration</ActionType>
+    </Action>
+    <Action>
+      <Order>1</Order>
+      <ActionProperties>
+        <Property>
+          <Key>
+            <string>Name</string>
+          </Key>
+          <Value>
+            <string>MetroMenuSelectedItem</string>
+          </Value>
+        </Property>
+        <Property>
+          <Key>
+            <string>ATTCUSTOMTYPE</string>
+          </Key>
+          <Value>
+            <string>MetroMenuData.MetroMenuDataItem</string>
+          </Value>
+        </Property>
+      </ActionProperties>
+      <Data />
+      <ActionType>VarDeclaration</ActionType>
+    </Action>
+    <Action>
+      <Order>2</Order>
+      <ActionProperties>
+        <Property>
+          <Key>
+            <string>MenuData</string>
+          </Key>
+          <Value>
+            <string>&amp;MetroMenuData</string>
+          </Value>
+        </Property>
+      </ActionProperties>
+      <Data />
+      <ActionType>SetPropertyToControl</ActionType>
+    </Action>
+    <Action>
+      <Order>3</Order>
+      <ActionProperties>
+        <Property>
+          <Key>
+            <string>SelectedItem</string>
+          </Key>
+          <Value>
+            <string>&amp;MetroMenuSelectedItem</string>
+          </Value>
+        </Property>
+      </ActionProperties>
+      <Data />
+      <ActionType>SetPropertyToControl</ActionType>
+    </Action>
+    <Action>
+      <Order>4</Order>
+      <ActionProperties />
+      <Data>
+//Sample code for KnetMetroMenu
+Sub 'KnetMetroMenu'
+	&amp;MetroMenuData = AddMetroMenu.Udp()
+EndSub
+ 
+//MetroMenu Navigational Menu control OnClick event handler 
+Event KnetMetroMenu1.OnClick
+	msg(!"Selected node name : " + &amp;MetroMenuSelectedItem.Name)
+EndEvent
+ 
+//Event Start
+	//Do 'KnetMetroMenu'
+//EndEvent
+  		</Data>
+      <ActionType>CodeSnippet</ActionType>
+    </Action>
+  </Actions>
+  <IsPublic>true</IsPublic>
+  <Android_IsScrollable>false</Android_IsScrollable>
+</ControlDefinition>

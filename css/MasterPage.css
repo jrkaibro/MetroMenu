@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'lane_-_narrowregular';
+    src: url('../fonts/lanenar-webfont.eot');
+    src: url('../fonts/lanenar-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lanenar-webfont.woff') format('woff'),
+         url('../fonts/lanenar-webfont.ttf') format('truetype'),
+         url('../fonts/lanenar-webfont.svg#lane_-_narrowregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#container {
+	width: 960px;
+	background-color: #FFFFFF;
+}
+
+#container .menu {  /* Centro */
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-110px;
+	margin-top:-40px;
+	
+}
+
+.tooltipped,abbr{
+	position:relative;
+}
+			
+.tooltipped:hover::before,abbr:hover::before{
+	position:absolute;
+	z-index:2;
+	top:25px;
+	border:0px solid transparent;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background:rgba(0,0,0,0.85);
+	content:attr(title);
+	color:white;
+	width:150px;
+	padding:0.5em;
+}
+			
+.tooltipped:hover::after,abbr:hover::after{
+	position:absolute;
+	z-index:2;
+	top:5px;
+	left:5px;
+	border-style:solid;
+	border-width:10px 10px 10px 10px;				
+	border-color:transparent transparent rgba(0,0,0,0.85) transparent ;
+	content:' ';
+}
+
+
+.menusistema{  
+   margin: 0 auto;
+   width:980px;
+   margin-top:5%;
+   
+}
+
+.menusistema1{
+  display:inline-block;
+  width:200px;
+  height:200px;
+  background-color:#999;
+  margin-bottom:10px;
+  margin-right:5px;
+}
+
+.menusistema2{
+  float:left;
+  margin-top:1px;
+  width:100px;
+  height:100px;
+  background-color:rgb(41, 78, 111);
+  background-image:url(../img/Engine.gif);
+  background-size: 60px 60px;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+.Text1{
+	float:right;
+    margin-top:70%;
+	margin-right:5px;
+	font-family: 'lane_-_narrowregular'; 
+	font-size:12px;
+	text-align:right;
+	color:#FFF;
+}
+
+.Text2{
+	font-size:30px;	
+	
+}
+
+.Text2 DIV{
+	font-size:10px;	
+}
+
+.Text3 {
+    margin-top:82%;	
+}
+
+
+.nomesistema {
+ font-size: 40px;	
+ margin-bottom: 30px;
+
+
+
+}
